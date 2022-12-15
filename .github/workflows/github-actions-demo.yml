@@ -9,4 +9,4 @@ jobs:
       - name: build and tag image
         run: docker build Dockerfile . --tag yohannespetrick/test-action-cc:v1
       - name: push to dockerhub
-        run: docker login -u ${{secret.DOCKERHUB_USERNAME}} -p ${{secret.DOCKERHUB_SECRET}} && docker push yohannespetrick/test-action-cc:v1
+        run: docker login -u ${{secrets.DOCKERHUB_USERNAME}} -p ${{secrets.DOCKERHUB_SECRET}} && docker push yohannespetrick/test-action-cc:v1
